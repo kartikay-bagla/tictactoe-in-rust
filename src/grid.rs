@@ -10,12 +10,29 @@ impl Grid {
     }
 
     pub fn print_grid(&self) {
-        for row in self.grid.iter() {
-            for col in row.iter() {
-                print!("{} ", col);
-            }
-            println!();
-        }
+        println!("┌---┬---┬---┐");
+        println!(
+            "│ {} │ {} │ {} │",
+            self.grid[0][0], self.grid[0][1], self.grid[0][2]
+        );
+        println!("├---┼---┼---┤");
+        println!(
+            "│ {} │ {} │ {} │",
+            self.grid[1][0], self.grid[1][1], self.grid[1][2]
+        );
+        println!("├---┼---┼---┤");
+        println!(
+            "│ {} │ {} │ {} │",
+            self.grid[2][0], self.grid[2][1], self.grid[2][2]
+        );
+        println!("└---┴---┴---┘");
+
+        // for row in self.grid.iter() {
+        //     for col in row.iter() {
+        //         print!("{} ", col);
+        //     }
+        //     println!();
+        // }
     }
 
     pub fn check_win(&self) -> u8 {
